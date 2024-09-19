@@ -69,14 +69,7 @@ app.post('/generate-caption', upload.single('image'), async (req, res) => {
     
     
     // Save to MongoDB
-//  //   const newCaption = new Caption({
-//         caption: generatedCaption,
-//         imagePath: req.file.imagepath, // Or any other path you use
-//     });
-    
-//     newCaption.save()
-//         .then(() => res.json({ caption: generatedCaption }))
-//         .catch(err => res.status(500).json({ error: err.message }));
+
 
     await Caption.create({
         caption: generatedCaption,
